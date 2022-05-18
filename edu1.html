@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let Tc = 5
+        alert ( (9/5) * Tc + 32 )
+
+
+
+        let name = 'Василий'
+        let admin = name
+        alert(admin)
+
+
+        let result1 = 10 + 10 + "10" 
+        console.log (result1)
+
+        let result2 = 10 + "10" + 10
+        console.log (result2)
+
+        let result3 = 10 + 10 + +"10"
+        console.log (result3)
+
+        let result4 = 10 / -""
+        console.log (result4)
+
+        let result5 = 10 / +"2,5"
+        console.log (result5)
+
+
+        /*
+        1. 10+10 получаем 20 и добавляем к строке в строчном формате 10 => получаем 2010
+
+        2. тк посередине у нас строчнй элемент, то сложения не происходит и мы лишь складываем строки
+
+        3.тк мы используем унарный плюс у нас "10" приходит в числовой формат и 10+10+10 = 30
+
+        4. при делении на -0 мы получаем -бесконечность, как я понял, при делении на -пустую строку так же получается - бесконечность
+        
+        5. при умножении либо делении числа на строку мы получаем NaN
+        */
+    </script>
+</body>
+</html>
