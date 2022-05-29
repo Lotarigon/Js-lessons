@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+let a = 1, b = 1, c, d;
+c = ++a;
+alert(c); //ответ: 2
+/*+ если расшифровать, то получаем с=1+1.*/
+
+d = b++;
+alert(d); //ответ: 1
+/*если + справа, то сначала возвращаем значение в d, и потом добавляем еще + 1.*/
+
+c = 2 + ++a;
+alert(c); //ответ: 5
+/*++1 = 2 и мы езе раз добавляем 1*/
+
+//пример 4
+d = 2 + b++;
+alert(d); //ответ: 4
+/*если я правильно понял, то тк стоит плюс меняется порядок вычисления и b++ в данном случае равен 2*/
+
+alert(a); //3
+alert(b); //3
+
+
+
+
+let a = 2;
+let x = 1 + (a *= 2);
+/* а*=2  получаем 4, тк 2*2 и затем возвращаем значение в а, затем 1 + 4 получается 5.*/
+
+
+
+let a = 4, b = 7;
+if (a >= 0 && b >= 0) {
+    console.log(a - b);
+} else if (a < 0 && b < 0) {
+    console.log(a * b);
+} else if (a * b < 0) {
+    console.log(a + b);
+}
+
+
+
+function addition(a, b) {
+    return a + b;
+}
+
+function subtraction(a, b) {
+    return a - b;
+}
+
+function division(a, b) {
+    return a / b;
+}
+
+
+function multiplication(a, b) {
+    return a * b;
+}
+
+
+
+function addition(a, b) {
+    return a + b;
+}
+
+function subtraction(a, b) {
+    return a - b;
+}
+
+function division(a, b) {
+    return a / b;
+}
+
+function multiplication(a, b) {
+    return a * b;
+}
+
+function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+        case "+":
+            return addition(arg1, arg2);
+        case "-":
+            return subtraction(arg1, arg2);
+        case "/":
+            return division(arg1, arg2);
+        case "*":
+            return multiplication(arg1, arg2);
+        default:
+            throw new Error("Операция " + operation + " не предусмотрена");
+    }
+}
+
+console.log(mathOperation(3, 5, "+"));
+console.log(mathOperation(3, 5, "-"));
+console.log(mathOperation(3, 5, "/"));
+console.log(mathOperation(3, 5, "*"));
+console.log(mathOperation(3, 5, "lorem"));
+    </script>
+</body>
+</html>
